@@ -15,7 +15,6 @@ export default function ProductsPage() {
 
     if (alreadyAdded === false) {
       console.log('added: ', product);
-      console.log('cart: ', cart);
     }
 
     dispatch(addProductToCart(product));
@@ -26,11 +25,12 @@ export default function ProductsPage() {
 
     if (isProductInCart) {
       console.log('removed: ', product);
-      console.log('cart: ', cart);
     }
 
     dispatch(removeProductFromCart(product));
   }
+
+  console.log('cart: ', cart);
 
   return (
     <div>
